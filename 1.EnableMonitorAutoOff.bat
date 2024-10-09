@@ -12,7 +12,7 @@ echo Starting - Enable Turn Off Monitor...
 timeout /t 1 > nul
 
 :: Run ps1 file in same folder to change policy
-powershell ./EnableMonitorAutoOff.ps1
+powershell ./PS1Files/EnableMonitorAutoOff.ps1
 
 :: timeout /t 1 > nul
 gpupdate /Target:Computer /Force
@@ -21,6 +21,7 @@ timeout /t 1 > nul
 
 echo Done, closing terminal.
 
+:: Wait a bit before closing
 timeout /t 4
 
 :: Close the terminal window
